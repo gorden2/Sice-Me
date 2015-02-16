@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<!-- saved from url=(0018)http://siceme.com/ -->
+<html lang="en" ng-app="kivvikLanding">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-animate){display:none !important;}ng\:form{display:block;}</style><link type="image/x-icon" href="http://siceme.com/img/kivvik_favicon.png" rel="SHORTCUT ICON">
+	<link href="./Sice Me_files/main.css" rel="stylesheet" type="text/css">
+	<link href="./Sice Me_files/css" rel="stylesheet" type="text/css">
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sice Me</title>
+	<script type="text/javascript" src="./Sice Me_files/jquery-1.11.1.min.js"> </script>
+	<script type="text/javascript" src="./Sice Me_files/Html5Shiv.js"> </script>
+	
+	<script type="text/javascript" src="./Sice Me_files/jquery-scrolltofixed.js"></script>
+	<!--<script type="text/javascript" src="js/tabs.js"></script>-->
+	
+	<!-- Bootstrap -->    	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+	<!-- Contact Form JS and CSS files -->
+	<script src="./Sice Me_files/scripts.js" type="text/javascript"></script>
+	<!--<script src='js/modernizr.button.js' type='text/javascript'></script>-->
+	<!-- <link href='css/modalPopup.css' rel='stylesheet' type='text/css' media='screen' />-->
+
+	<!--<link href="css/loadingButtons.css" rel="stylesheet" type="text/css">-->
+	<link href="./Sice Me_files/main.css" rel="stylesheet" type="text/css">
+	
+	<!-- <link rel="stylesheet" media="only screen and (max-width: 480px)" href="css/main_max-420px.css">-->
+
+	<link href="./Sice Me_files/css(1)" rel="stylesheet" type="text/css">
+
+	<link type="image/x-icon" href="http://siceme.com/img/kivvik_favicon.png" rel="SHORTCUT ICON">
+	<!-- AngularJS -->
+	<script src="./Sice Me_files/angular.min.js"></script>
+	<script src="./Sice Me_files/classie.js" type="text/javascript"></script>
+	<!--<script src='js/progressButton.js' type='text/javascript'></script>-->
+
+	<!-- Firebase -->
+
+	<script src="./Sice Me_files/app.js" type="text/javascript"></script>
+
+	<script type="text/javascript">
+	$('#secondaryHeader').scrollToFixed();
+	function submitForm()
+	{
+		var email = $("#email").val();
+		$.ajax({
+			type: "POST",
+			url: "/subscriber.php",
+			data: {email:email},
+			success: function(response){
+				console.log(response);
+			},
+			error:function(jqXHR, textStatus, errorThrown) {
+				console.log("Login error response is: " + jqXHR.responseText);
+			},
+			dataType: "json"
+		});
+		
+		return false;
+
+	};
+	</script>
+	<!-- google maps -->
+
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places"></script>
+	
+</head>
+
+<body>
+	
+	<section class="homemain"  style="background-color:black;">
+		<div id="nav" class="navbar navbar-default " role="navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">
+						<img alt="Brand" id="headerlogo" src="./Sice Me_files/logoplace.png">
+					</a>
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse navbar-menubuilder">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="Sice Me.html">Home</a>
+						</li>
+						<li><a href="join_our_team.html">Join Our Team</a>
+						</li>
+						<li><a href="faq.html">FAQ</a>
+						</li>
+						<li><a href="#">Contact</a>
+						</li>
+						<li><a href="#">Culture</a>
+						</li>
+						<li><a href="#">Log In</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>		
+
+		<!-- 	background video -->
+<!-- 		<video id="awesome_video" autoplay="autoplay" loop="loop" muted="muted">
+			<source src="vid/BBQ_Chicken_Breast_hd.mp4" type="video/mp4">
+			</video> -->
+
+			<div class="mainContent">
+				<div class="tagLine">
+					<h1 id="tagLineh1">Your favorite meals delivered to you.</h1>
+					<h2 id="tagLineh2">Save time. Stress less. Live College.</h2>
+					<p id="tagLinep">Coming Fall 2014</p>
+				</div>
+				<br/>
+<!-- 				<div id="map-container">
+					<form class="form-search form-inline">
+						<input type="text" id="pac-input" class="form-control search-query controls"  placeholder="Please Enter Your Address" onfocus="showmap();initialize()" onblur="hidemap()"/>
+					</form>
+					<div id="map-canvas"></div>
+				</div> -->
+			</div>
+		</section>
+
+		<div class="navbar_anchor"></div>
+<!--     <section class="navbar" id="navbar">
+        <div class="bizMenuCont">
+            <div class="bizMenuLeft">
+                <p id="bizMenuLeftItem"><a href="http://siceme.com/#restaurants">Now Serving</a></p>
+                <p id="bizMenuLeftItem"><a href="http://siceme.com/#qualitylink">Restaurants</a></p>
+                <p id="bizMenuLeftItem"><a href="http://siceme.com/#fitlink">How it works</a></p>
+                <p id="bizMenuLeftItem"><a href="http://siceme.com/#roilink">testimonials</a></p>
+            </div>
+            <div class="bizMenuSignUp">
+                <a id="signUpH" href="http://siceme.com/#" onclick="OpenLoginPopup()"><p id="bizMenuSignup">Coming Soon</p></a>
+            </div>
+        </div>
+    </section> -->
+
+    <section class="restaurants" id="restaurants">
+    	<div class="restaurantsCont">
+    		<h2 id="restaurantsh2">Sice me with these restaurants!</h2>
+    		<!-- 			<div class="restaurantsp"><p id="restaurantspa">College Park</p><p id="restaurantsp">Georgetown</p><p id="restaurantsp">George Washington</p><p id="restaurantsp">George Mason</p><p></p></div> -->
+    		
+    		<div class="logosRow1">
+    			<div class="logo1">
+    				<img id="logoComp" src="./Sice Me_files/fiveguys.png">
+    			</div>
+<!-- 				<div class="logo1">
+					<img id="logoComp" src="./Sice Me_files/bobbys.png">
+				</div> -->
+				<div class="logo1">
+					<img id="logoComp" src="./Sice Me_files/chipotle.png">
+				</div>
+				<div class="logo1">
+					<img id="logoComp" src="./Sice Me_files/jerk.png">
+				</div>
+				<div class="logo1">
+					<img id="logoComp" src="./Sice Me_files/noodles.png">
+				</div>				
+			</div>
+<!-- 			<div class="logosRow1">
+				<div class="logo1">
+				</div>
+				<div class="logo1">
+					<img id="logoComp" src="./Sice Me_files/sweet.png">
+				</div>
+				<div class="logo1">
+					<img id="logoComp" src="./Sice Me_files/noodles.png">
+				</div>
+				<div class="logo1">
+				</div>
+			</div> -->
+			<a href="mailto:contactus@collegecampusconcierge.com"><p id="becomepartner">Become a partner restuarant &gt;</p></a>
+		</div>
+	</section>
+
+	<section class="howItWorks">
+		<div id="howItWorksCont">
+			<h2 id="howItWorksh2">How it works.</h2>
+			<h3 id="restaurantsh3">It's simple and easy</h3>
+		</div>
+		<div class="instruct" id="instruct">
+			<div class="p_width">
+				<div class="Fleft">
+					<img id="stepimg" src="./Sice Me_files/step1.png" alt="step 2">
+					<h3>Order</h3>
+					<h4>Order your food from your favorite restuarants.</h4>
+					
+				</div>
+				<div class="Fleft">
+					<img id="stepimg" src="./Sice Me_files/step2.png" alt="step 3">
+					<h3>Relax</h3>
+					<h4>Sit back and watch some Netflix your food is en-route.</h4>
+					
+				</div>
+				<div class="Fright">
+					<img id="stepimg" src="./Sice Me_files/step3.png" alt="step 4">
+					<h3>Enjoy</h3>
+					<h4>Get your grub on.</h4>
+					
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</section>
+
+	<section class="about_home">
+		<div class="about_home_cont">
+			<h2 id="abouth2">About Us</h2>
+			<p id="aboutp">SiceMe was founded in 2014 with the gola to offer quality delivery services on College Campuses. At SiceMe making student's lives easier is out passion. We have made it our mission to supply studnets with exceptional service to provide students with more leasure time, more study time, and more time to do the things that they love. SiceMe gives students the freedom to live college to the fullest!</p>
+			<div class="about_img">
+				<img id="about_img" src="./Sice Me_files/about_imgs.jpg">
+			</div>
+		</div>
+	</section>
+	
+    <!--
+	<section class="footer">
+	</section>
+-->
+
+    <footer class="mainFooter">
+      <div class="container" style="overflow:hidden;width:1000px;">
+      	<div id="footer1">&copy; Copyright College Campus Concierge. All Rights Reserved &nbsp;&nbsp;&bull;&nbsp;<a href="Sice Me.html">Home</a>&nbsp;&nbsp;&bull;&nbsp;<a href="join_our_team.html">Join our team</a>&nbsp;&nbsp;&bull;&nbsp;<a href="faq.html">FAQ</a>&nbsp;&nbsp;&bull;&nbsp;<a href="#">Contact</a>&nbsp;&nbsp;&bull;&nbsp;<a href="#">Culture</a></div>
+      	<div id="footer2"><img src="Sice Me_files/facebook.png"/><img src="Sice Me_files/twitter.png"/></div>
+    </footer>
+	<!--<section class="restaurants">
+		<div class="restaurantsCont">
+			<h2 id="restaurantsh2">What people are saying.</h2>
+			<h3 id="restaurantsh3">These are the bad-ass restaurants we serve</h3>
+
+			<div class="testi">
+				<img id="prof" src="img/lind.png">
+				<h4 id="testiname">Lindsey K.</h4>
+				<img id="elipses" src="img/elipses.png">
+				<p id="testip">“Lorum "Lorem ipsum dolor sit amet, consecttetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+			</div>
+			<div class="testi">
+				<img id="prof" src="img/lind.png">
+				<h4 id="testiname">Lindsey K.</h4>
+				<img id="elipses" src="img/elipses.png">
+				<p id="testip">“Lorum "Lorem ipsum dolor sit amet, consecttetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+			</div>
+			<div class="testi">
+				<img id="prof" src="img/lind.png">
+				<h4 id="testiname">Lindsey K.</h4>
+				<img id="elipses" src="img/elipses.png">
+				<p id="testip">“Lorum "Lorem ipsum dolor sit amet, consecttetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+			</div>
+			<div class="testi">
+				<img id="prof" src="img/wally.png">
+				<h4 id="testiname">Lindsey K.</h4>
+				<img id="elipses" src="img/elipses.png">
+				<p id="testip">“woof" </p>
+			</div>
+		</div>
+	</section>-->
+	
+
+	
+
+
+</body></html>
